@@ -1,14 +1,35 @@
 *{
     margin: 0;
     padding: 0;
-    border: 0;
+    text-align: center;
 }
  table {
+   padding-top: 0;
+    width: 100%;
     border-collapse: collapse;
  }
+
 
  th, td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
+ }
+
+ button{
+   
+   padding: 10px;
+   border-radius: 10px;
+   background-color: cornflowerblue;
+   margin: 10px;
+   
+ }
+
+ #visitCount{
+  padding: 20px;
+  text-align: center;
+ }
+
+.distance {
+   padding-top: 50px;
  }

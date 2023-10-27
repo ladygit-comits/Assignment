@@ -64,16 +64,8 @@ const showAllStoredKeyValues = () => {
 </head>
 
 <body onload="initialize()">
-    <ui id="storedItems"></ui>
-    <button type="button" onclick="setColorPreference('red')">Red</button>
-    <button type="button"
-   onclick="setColorPreference('green')">Green</button>
-    <button type="button"
-   onclick="setColorPreference('blue')">Blue</button>
-    <div id="visitCount"></div>
-    <button type="button" onclick="removeCount()">Remove count</button>
-    <button type="button" onclick="clearAll()">Clear all</button>
-  <table>
+   
+  <table class="position">
     <tr>
         <th rowspan="2"><img src="passport.png" alt="Passport Photo" width="200" height="200"></th>
         <th>Name:</th>
@@ -84,5 +76,18 @@ const showAllStoredKeyValues = () => {
         <td>SCT221-0406/2021</td>
     </tr>
 </table>
+
+<ui id="storedItems"></ui>
+<div class="distance"></div>
+<button type="button" onclick="setColorPreference('red')">Red</button>
+<button type="button"
+onclick="setColorPreference('green')">Green</button>
+<button type="button"
+onclick="setColorPreference('blue')">Blue</button>
+</div>
+<div id="visitCount"></div>
+<button type="button" onclick="removeCount()">Remove count</button>
+<button type="button" onclick="clearAll()">Clear all</button>
+
 </body>
 </html>
