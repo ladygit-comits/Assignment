@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Document</title>
+
+    <script type="text/javascript">
+        const localStorage = window.localStorage;
+        const initialize = () => {
+        if (localStorage) {
+        const count = localStorage.getItem("visitCount") || 0;
+        const newCount = parseInt(count) + 1;
+        localStorage.setItem("visitCount", newCount);
+        updateDOM();
+        }
+        };
+        const updateDOM = () => {
+        const count = localStorage.getItem("visitCount") || 0;
+        document.getElementById(
+        "visitCount"
+        ).innerHTML = `Visit count ${count}`;
+        };
+        </script>
 </head>
 
-<body>
-
+<body onload="initialize()">
+    <div id="visitCount"></div>
     
   <table>
     <tr>
