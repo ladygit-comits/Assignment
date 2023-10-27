@@ -7,6 +7,7 @@
     <title>Local Storage</title>
 
     <script type="text/javascript">
+        
         const localStorage = window.localStorage;
         const initialize = () => {
         if (localStorage) {
@@ -26,7 +27,8 @@
         "visitCount"
         ).innerHTML = `Visit count ${count}`;
         document.body.style.background = preference.color || "white";
-        };
+       
+    };
         const setColorPreference = color => {
         const localStorage = window.localStorage;
         const preference = { color }
@@ -42,10 +44,27 @@ const clearAll = () => {
  localStorage.clear();
  updateDOM();
 };
+const showAllStoredKeyValues = () => {
+ console.log(`we have ${localStorage.length} values`);
+ const ul = document.getElementById("storedItems");
+ ul.innerHTML = "";
+ for (let index = 0; index < localStorage.length; index++) {
+ const key = localStorage.key(index);
+ var li = document.createElement("li");
+ li.appendChild(
+ document.createTextNode(`${key} = ${localStorage.getItem(key)}`)
+ );
+ ul.appendChild(li);
+ showAllStoredKeyValues();
+ }
+ };
+ 
+
         </script>
 </head>
 
 <body onload="initialize()">
+    <ui id="storedItems"></ui>
     <button type="button" onclick="setColorPreference('red')">Red</button>
     <button type="button"
    onclick="setColorPreference('green')">Green</button>
@@ -57,7 +76,7 @@ const clearAll = () => {
   <table>
     <tr>
         <th rowspan="2"><img src="passport.png" alt="Passport Photo" width="200" height="200"></th>
-        <th  >Name:</thclass>
+        <th>Name:</th>
         <td>Faith Wanjiru Kung'u</td>
     </tr>
     <tr>
