@@ -33,3 +33,15 @@
 .distance {
    padding-top: 50px;
  }
+
+ @media (max-width: 600px) {
+   
+ }
+
+ @media (max-width: 601px)  and (max-width :1024px){
+   
+ }
+
+ @media (max-width: 1025px){
+
+ }
