@@ -33,6 +33,15 @@
         localStorage.setItem("preference", JSON.stringify(preference));
         updateDOM();
         };
+
+        const removeCount = () => {
+ localStorage.removeItem("visitCount");
+ updateDOM();
+};
+const clearAll = () => {
+ localStorage.clear();
+ updateDOM();
+};
         </script>
 </head>
 
